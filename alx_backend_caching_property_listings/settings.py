@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django-redis',
     'properties'
 ]
 
@@ -89,7 +88,11 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'propery_listings_db',
+        'NAME': 'property_listings',
+        'USER': 'postgresql',
+        'PASSWORD': 'postgresql',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
