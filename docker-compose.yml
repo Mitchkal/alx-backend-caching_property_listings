@@ -1,0 +1,19 @@
+# defines a postgresql service and a redis service
+version: '3.8'
+services:
+  db:
+    image: postgresql:latest
+    environment:
+      POSTGRES_USER: postgresql
+      POSTGRES_PASSWORD: postgresql
+      POSTGRES_DB: property_listings
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:/var/lib/postgresql/db_data
+  redis:
+    image: redis:latest
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/db_data
